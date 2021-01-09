@@ -1,0 +1,9 @@
+{
+  "name": "minimal",
+  "version": "1.0.0",
+  "main": "api/index.js",
+  "dependencies": {
+    "chrome-aws-lambda": "^5.5.0",
+    "puppeteer-core": "^5.5.0"
+  }
+}
