@@ -1,4 +1,4 @@
-import { launch } from 'puppeteer-core'
+import core from 'puppeteer-core'
 import chrome from 'chrome-aws-lambda'
 
 const isDev = !process.env.AWS_REGION
@@ -14,7 +14,7 @@ async function getOptions() {
 
 async function getScreenshot() {
   const options = await getOptions()
-  const browser = await launch(options)
+  const browser = await core.launch(options)
   const page = await browser.newPage()
 
   await page.setViewport({ width: 1440, height: 900 })
